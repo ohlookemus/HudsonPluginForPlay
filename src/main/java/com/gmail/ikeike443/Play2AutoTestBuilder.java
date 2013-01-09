@@ -27,6 +27,10 @@ import java.util.Map;
 public class Play2AutoTestBuilder extends Builder {
 
     private final String play_cmd;
+    private final String play_cmd2;
+    private final String play_cmd3;
+    private final String play_cmd4;
+    private final String play_cmd5;
     private List<String> play_cmds;
     private final String play_path;
     private PrintStream logger;
@@ -45,9 +49,17 @@ public class Play2AutoTestBuilder extends Builder {
     @DataBoundConstructor
     public Play2AutoTestBuilder(
             final String play_cmd,
-           final String play2_path) {
+            final String play_cmd2,
+            final String play_cmd3,
+            final String play_cmd4,
+            final String play_cmd5,
+            final String play2_path) {
         System.out.println("Creating play auto test builder");
         this.play_cmd = ensureCommandString(play_cmd);
+        this.play_cmd2 = ensureCommandString(play_cmd2);
+        this.play_cmd3 = ensureCommandString(play_cmd3);
+        this.play_cmd4 = ensureCommandString(play_cmd4);
+        this.play_cmd5 = ensureCommandString(play_cmd5);
         this.play_path = play2_path;
     }
 
@@ -201,6 +213,10 @@ public class Play2AutoTestBuilder extends Builder {
     List<String> nonEmptyCommands() {
         List<String> commands = new ArrayList<String>(5);
         addIfNotEmpty(this.play_cmd, commands);
+        addIfNotEmpty(this.play_cmd2, commands);
+        addIfNotEmpty(this.play_cmd3, commands);
+        addIfNotEmpty(this.play_cmd4, commands);
+        addIfNotEmpty(this.play_cmd5, commands);
         return commands;
     }
 
@@ -219,6 +235,22 @@ public class Play2AutoTestBuilder extends Builder {
      */
     public String getPlay_cmd() {
         return play_cmd;
+    }
+
+    public String getPlay_cmd2() {
+        return play_cmd2;
+    }
+
+    public String getPlay_cmd3() {
+        return play_cmd3;
+    }
+
+    public String getPlay_cmd4() {
+        return play_cmd4;
+    }
+
+    public String getPlay_cmd5() {
+        return play_cmd5;
     }
 
     public String getPlay_path() {

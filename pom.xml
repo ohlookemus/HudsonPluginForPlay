@@ -4,13 +4,13 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>1.409</version>
+        <version>1.495</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>play-autotest-plugin</artifactId>
     <name>playframework-plugin</name>
-    <version>0.0.13-SNAPSHOT</version>
+    <version>0.0.14-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/play-plugin</url>
     <distributionManagement>
